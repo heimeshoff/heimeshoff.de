@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Get in touch with Marco Heimeshoff for DDD training, consulting, or speaking engagements. Book a workshop or ask a question.">
+  <title>Contact | Marco Heimeshoff - Get in Touch</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="header__logo">
+        <img src="assets/bildmarke.svg" alt="Marco Heimeshoff Logo">
+      </a>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link">Home</a></li>
+          <li><a href="about.html" class="nav__link">About</a></li>
+          <li><a href="services.html" class="nav__link">Services</a></li>
+          <li><a href="contact.html" class="nav__link nav__link--active">Contact</a></li>
+        </ul>
+        <a href="contact.html" class="btn btn--primary">Book a Training</a>
+        <button class="nav__toggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Contact Section -->
+  <section class="section" style="padding-top: calc(var(--header-height) + var(--space-3xl));">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-header__subtitle">Contact</span>
+        <h1 class="section-header__title">Let's Talk</h1>
+        <p class="section-header__description">
+          Interested in a workshop, consulting engagement, or speaking invitation?
+          Have a question about DDD? I'd love to hear from you.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Contact Form -->
+        <div class="contact-form">
+          <form id="contact-form" novalidate>
+            <div class="form-group">
+              <label for="name">Name *</label>
+              <input type="text" id="name" name="name" required placeholder="Your name">
+              <span class="form-error" id="name-error"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+              <span class="form-error" id="email-error"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="company">Company</label>
+              <input type="text" id="company" name="company" placeholder="Your company (optional)">
+            </div>
+
+            <div class="form-group">
+              <label for="interest">I'm interested in...</label>
+              <select id="interest" name="interest">
+                <option value="">Select an option</option>
+                <option value="ddd-workshop">DDD Workshop</option>
+                <option value="eventstorming">EventStorming Training</option>
+                <option value="event-sourcing">Event Sourcing & CQRS Training</option>
+                <option value="llm-development">LLM-Assisted Development</option>
+                <option value="consulting">Consulting & Advisory</option>
+                <option value="speaking">Speaking Engagement</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message *</label>
+              <textarea id="message" name="message" required placeholder="Tell me about your needs, questions, or project..."></textarea>
+              <span class="form-error" id="message-error"></span>
+            </div>
+
+            <button type="submit" class="btn btn--primary btn--large" style="width: 100%;">
+              Send Message
+            </button>
+
+            <p id="form-status" style="margin-top: var(--space-lg); text-align: center;"></p>
+          </form>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="contact-info">
+          <div class="contact-info__item">
+            <div class="contact-info__icon">&#x2709;</div>
+            <div>
+              <h4>Email</h4>
+              <p>
+                Prefer to email directly?<br>
+                <a href="mailto:marco@heimeshoff.de">marco@heimeshoff.de</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="contact-info__item">
+            <div class="contact-info__icon">&#x23F1;</div>
+            <div>
+              <h4>Response Time</h4>
+              <p>
+                I typically respond within 1-2 business days.
+                For urgent matters, please mention it in your message.
+              </p>
+            </div>
+          </div>
+
+          <div class="contact-info__item">
+            <div class="contact-info__icon">&#x1F30D;</div>
+            <div>
+              <h4>Location</h4>
+              <p>
+                Based in Germany, working with clients worldwide.
+                Remote and on-site engagements available.
+              </p>
+            </div>
+          </div>
+
+          <div>
+            <h4 style="margin-bottom: var(--space-md);">Connect Online</h4>
+            <div class="social-links">
+              <a href="https://twitter.com/Heimeshansen" target="_blank" rel="noopener" class="social-link" aria-label="Twitter/X">
+                X
+              </a>
+              <a href="https://mastodon.social/@heimeshoff" target="_blank" rel="noopener" class="social-link" aria-label="Mastodon">
+                M
+              </a>
+              <a href="https://linkedin.com/in/heimeshoff" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
+                in
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section section--gray">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-header__subtitle">FAQ</span>
+        <h2 class="section-header__title">Common Questions</h2>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <h3 class="card__title">What languages do you train in?</h3>
+          <p class="card__description">
+            I offer workshops in both English and German. Code examples are typically
+            language-agnostic or in C#/Java/TypeScript, but we can adapt to your team's stack.
+          </p>
+        </div>
+        <div class="card">
+          <h3 class="card__title">How many people can attend a workshop?</h3>
+          <p class="card__description">
+            For optimal interaction, I recommend 8-16 participants for hands-on workshops.
+            Larger groups can work for talks and presentations. Let's discuss your specific needs.
+          </p>
+        </div>
+        <div class="card">
+          <h3 class="card__title">Do you offer remote workshops?</h3>
+          <p class="card__description">
+            Yes! I've refined my remote workshop format over years of experience. Using
+            collaborative tools like Miro, we achieve the same interactive experience as in-person.
+          </p>
+        </div>
+        <div class="card">
+          <h3 class="card__title">Can workshops be customized?</h3>
+          <p class="card__description">
+            Absolutely. For in-house workshops, I can tailor the content to your specific
+            domain, technology stack, and learning objectives. We'll discuss this during planning.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <img src="assets/bildmarke.svg" alt="Marco Heimeshoff">
+          <p>
+            Helping teams master the art of business software through Domain-Driven Design,
+            collaborative modeling, and practical expertise.
+          </p>
+        </div>
+        <div>
+          <h4 class="footer__title">Navigation</h4>
+          <ul class="footer__links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__title">Services</h4>
+          <ul class="footer__links">
+            <li><a href="services.html">DDD Workshops</a></li>
+            <li><a href="services.html">EventStorming</a></li>
+            <li><a href="services.html">Consulting</a></li>
+            <li><a href="services.html">Speaking</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__title">Community</h4>
+          <ul class="footer__links">
+            <li><a href="https://kandddinsky.de" target="_blank" rel="noopener">KanDDDinsky</a></li>
+            <li><a href="https://virtualddd.com" target="_blank" rel="noopener">Virtual DDD</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copyright">&copy; 2024 Marco Heimeshoff. All rights reserved.</p>
+        <div class="footer__social">
+          <a href="https://twitter.com/Heimeshansen" target="_blank" rel="noopener" aria-label="Twitter">X</a>
+          <a href="https://mastodon.social/@heimeshoff" target="_blank" rel="noopener" aria-label="Mastodon">M</a>
+          <a href="https://linkedin.com/in/heimeshoff" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

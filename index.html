@@ -1,68 +1,274 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-	  <meta http-equiv="Pragma" content="no-cache">
-	  <meta http-equiv="Expires" content="0">
-    <title>Heimeshoff IT - The art of business software</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="data:application/javascript;base64,aW1wb3J0IHsgTXNnIH0gZnJvbSAiLi9UeXBlcy5mcy5qcyI7DQppbXBvcnQgeyBzaW5nbGV0b24gfSBmcm9tICIuL2ZhYmxlX21vZHVsZXMvZmFibGUtbGlicmFyeS40LjUuMC9MaXN0LmpzIjsNCmltcG9ydCB7IFByb2dyYW1Nb2R1bGVfcnVuIH0gZnJvbSAiLi9mYWJsZV9tb2R1bGVzL0ZhYmxlLkVsbWlzaC5ITVIuNy4wLjAvLi4vRmFibGUuRWxtaXNoLjQuMS4wL3Byb2dyYW0uZnMuanMiOw0KaW1wb3J0IHsgUHJvZ3JhbV93aXRoUmVhY3RTeW5jaHJvbm91cyB9IGZyb20gIi4vZmFibGVfbW9kdWxlcy9GYWJsZS5FbG1pc2guSE1SLjcuMC4wLy4uL0ZhYmxlLkVsbWlzaC5SZWFjdC40LjAuMC9yZWFjdC5mcy5qcyI7DQppbXBvcnQgeyBQcm9ncmFtTW9kdWxlX3RvTmF2aWdhYmxlIH0gZnJvbSAiLi9mYWJsZV9tb2R1bGVzL0ZhYmxlLkVsbWlzaC5Ccm93c2VyLjQuMC4zL25hdmlnYXRpb24uZnMuanMiOw0KaW1wb3J0IHsgcGFyc2VQYXRoIH0gZnJvbSAiLi9mYWJsZV9tb2R1bGVzL0ZhYmxlLkVsbWlzaC5Ccm93c2VyLjQuMC4zL3BhcnNlci5mcy5qcyI7DQppbXBvcnQgeyB1cmxVcGRhdGUgYXMgdXJsVXBkYXRlXzEsIHBhZ2VQYXJzZXIgfSBmcm9tICIuL1JvdXRlci5mcy5qcyI7DQppbXBvcnQgeyBQcm9ncmFtTW9kdWxlX21rUHJvZ3JhbSwgUHJvZ3JhbU1vZHVsZV93aXRoU3Vic2NyaXB0aW9uIH0gZnJvbSAiLi9mYWJsZV9tb2R1bGVzL0ZhYmxlLkVsbWlzaC40LjEuMC9wcm9ncmFtLmZzLmpzIjsNCmltcG9ydCB7IHVwZGF0ZSwgaW5pdCB9IGZyb20gIi4vU3RhdGUuZnMuanMiOw0KaW1wb3J0IHsgdmlldyB9IGZyb20gIi4vU2NhZmZvbGRpbmcuZnMuanMiOw0KaW1wb3J0ICIuL2luZGV4LmNzcyI7DQoNCg0KZXhwb3J0IGZ1bmN0aW9uIG9uU2Nyb2xsKGRpc3BhdGNoKSB7DQogICAgbGV0IHdhc09uVG9wID0gZmFsc2U7DQogICAgY29uc3QgaGFuZGxlciA9IChlKSA9PiB7DQogICAgICAgIGlmIChkb2N1bWVudC5kb2N1bWVudEVsZW1lbnQuc2Nyb2xsVG9wIDwgMjApIHsNCiAgICAgICAgICAgIGlmICh3YXNPblRvcCA9PT0gZmFsc2UpIHsNCiAgICAgICAgICAgICAgICB3YXNPblRvcCA9IHRydWU7DQogICAgICAgICAgICAgICAgZGlzcGF0Y2gobmV3IE1zZygyLCBbXSkpOw0KICAgICAgICAgICAgfQ0KICAgICAgICB9DQogICAgICAgIGVsc2UgaWYgKHdhc09uVG9wID09PSB0cnVlKSB7DQogICAgICAgICAgICB3YXNPblRvcCA9IGZhbHNlOw0KICAgICAgICAgICAgZGlzcGF0Y2gobmV3IE1zZygzLCBbXSkpOw0KICAgICAgICB9DQogICAgfTsNCiAgICB3aW5kb3cuYWRkRXZlbnRMaXN0ZW5lcigic2Nyb2xsIiwgaGFuZGxlcik7DQogICAgcmV0dXJuIHsNCiAgICAgICAgRGlzcG9zZSgpIHsNCiAgICAgICAgICAgIHdpbmRvdy5yZW1vdmVFdmVudExpc3RlbmVyKCJzY3JvbGwiLCBoYW5kbGVyKTsNCiAgICAgICAgfSwNCiAgICB9Ow0KfQ0KDQpleHBvcnQgZnVuY3Rpb24gc3Vic2NyaXB0aW9ucyhfYXJnKSB7DQogICAgcmV0dXJuIHNpbmdsZXRvbihbc2luZ2xldG9uKCJvblNjcm9sbCIpLCBvblNjcm9sbF0pOw0KfQ0KDQpQcm9ncmFtTW9kdWxlX3J1bihQcm9ncmFtX3dpdGhSZWFjdFN5bmNocm9ub3VzKCJlbG1pc2gtYXBwIiwgUHJvZ3JhbU1vZHVsZV90b05hdmlnYWJsZSgobG9jYXRpb24pID0+IHBhcnNlUGF0aChwYWdlUGFyc2VyLCBsb2NhdGlvbiksIHVybFVwZGF0ZV8xLCBQcm9ncmFtTW9kdWxlX3dpdGhTdWJzY3JpcHRpb24oc3Vic2NyaXB0aW9ucywgUHJvZ3JhbU1vZHVsZV9ta1Byb2dyYW0oaW5pdCwgdXBkYXRlLCB2aWV3KSkpKSk7DQoNCg==" as="script">
-    <script type="text/javascript">
-      // Single Page Apps for GitHub Pages
-      // https://github.com/rafrex/spa-github-pages
-      // Copyright (c) 2016 Rafael Pedicini, licensed under the MIT License
-      // ----------------------------------------------------------------------
-      // This script checks to see if a redirect is present in the query string
-      // and converts it back into the correct url and adds it to the
-      // browser's history using window.history.replaceState(...),
-      // which won't cause the browser to attempt to load the new url.
-      // When the single page app is loaded further down in this file,
-      // the correct url will be waiting in the browser's history for
-      // the single page app to route accordingly.
-      (function(l) {
-        if (l.search) {
-          var q = {};
-          l.search.slice(1).split('&').forEach(function(v) {
-            var a = v.split('=');
-            q[a[0]] = a.slice(1).join('=').replace(/~and~/g, '&');
-          });
-          if (q.p !== undefined) {
-            window.history.replaceState(null, null,
-              l.pathname.slice(0, -1) + (q.p || '') +
-              (q.q ? ('?' + q.q) : '') +
-              l.hash
-            );
-          }
-        }
-      }(window.location))
-    </script>  
-    <script async type="module" crossorigin src="/assets/index-am202h9a.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-3D7L84r7.css">
-  </head>
-  <body>
-    <div id="elmish-app"></div>
-   
-    
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Marco Heimeshoff - Domain-Driven Design Expert, Software Architect, and Trainer. Master the art of business software with DDD, EventStorming, and CQRS workshops.">
+  <title>Marco Heimeshoff | Domain-Driven Design Expert & Trainer</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="header__logo">
+        <img src="assets/bildmarke.svg" alt="Marco Heimeshoff Logo">
+      </a>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link nav__link--active">Home</a></li>
+          <li><a href="about.html" class="nav__link">About</a></li>
+          <li><a href="services.html" class="nav__link">Services</a></li>
+          <li><a href="contact.html" class="nav__link">Contact</a></li>
+        </ul>
+        <a href="contact.html" class="btn btn--primary">Book a Training</a>
+        <button class="nav__toggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
 
-    <script>
-      function scrollIntoView(hash) {
-        let elem = document.getElementById(hash);
-        elem.scrollIntoView({ left: 0, block: 'start', behavior: 'smooth' });
-        e.preventDefault();
-      };
-	  </script>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero__content">
+        <span class="hero__subtitle">Domain-Driven Design Expert</span>
+        <h1 class="hero__title">Master the Art of <span>Business Software</span></h1>
+        <p class="hero__description">
+          Learn to build software that truly serves your business. Through Domain-Driven Design,
+          EventStorming, and collaborative modeling, I help teams bridge the gap between
+          technical and domain complexity.
+        </p>
+        <div class="hero__cta">
+          <a href="services.html" class="btn btn--primary btn--large">Explore Trainings</a>
+          <a href="about.html" class="btn btn--outline btn--large">Learn My Approach</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- Value Proposition - Four Pillars -->
+  <section class="section section--gray">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-header__subtitle">Philosophy</span>
+        <h2 class="section-header__title">Four Pillars of Effective Software Design</h2>
+        <p class="section-header__description">
+          Great software emerges from the intersection of human understanding and technical excellence.
+        </p>
+      </div>
+      <div class="pillars">
+        <div class="pillar">
+          <div class="pillar__icon pillar__icon--empathy">&#x1F91D;</div>
+          <h3 class="pillar__title">Empathy</h3>
+          <p class="pillar__description">
+            Understanding the human side of software. Bridging the gap between developers and domain experts through active listening and collaboration.
+          </p>
+        </div>
+        <div class="pillar">
+          <div class="pillar__icon pillar__icon--modelling">&#x1F4CA;</div>
+          <h3 class="pillar__title">Modelling</h3>
+          <p class="pillar__description">
+            Capturing business complexity in elegant models. EventStorming, Domain Stories, and collaborative techniques that reveal hidden insights.
+          </p>
+        </div>
+        <div class="pillar">
+          <div class="pillar__icon pillar__icon--language">&#x1F4AC;</div>
+          <h3 class="pillar__title">Language</h3>
+          <p class="pillar__description">
+            Building a Ubiquitous Language that everyone speaks. When code mirrors business terminology, misunderstandings disappear.
+          </p>
+        </div>
+        <div class="pillar">
+          <div class="pillar__icon pillar__icon--hybrid">&#x1F916;</div>
+          <h3 class="pillar__title">Hybrid Intelligence</h3>
+          <p class="pillar__description">
+            Combining human expertise with AI capabilities. LLM-assisted development that amplifies your team's domain knowledge.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social Proof - Stats -->
+  <section class="section">
+    <div class="container">
+      <div class="stats">
+        <div class="stat">
+          <div class="stat__number">200+</div>
+          <div class="stat__label">Domains Modeled</div>
+        </div>
+        <div class="stat">
+          <div class="stat__number">15+</div>
+          <div class="stat__label">Years Experience</div>
+        </div>
+        <div class="stat">
+          <div class="stat__number">100s</div>
+          <div class="stat__label">Companies Trained</div>
+        </div>
+      </div>
+      <div class="clients mt-2xl">
+        <span class="clients__logo">Mercedes</span>
+        <span class="clients__logo">Lego</span>
+        <span class="clients__logo">Spotify</span>
+        <span class="clients__logo">Starbucks</span>
+        <span class="clients__logo">SAP</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Preview -->
+  <section class="section section--gray">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-header__subtitle">Trainings & Workshops</span>
+        <h2 class="section-header__title">Level Up Your Team's Skills</h2>
+        <p class="section-header__description">
+          Hands-on workshops that transform how your team approaches software design.
+        </p>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <div class="card__icon">&#x1F3AF;</div>
+          <h3 class="card__title">Domain Models in Practice</h3>
+          <p class="card__description">
+            A comprehensive workshop covering DDD tactical patterns, CQRS, and Event Sourcing.
+            Learn to design systems that reflect your business reality.
+          </p>
+          <a href="services.html" class="card__link">Learn More</a>
+        </div>
+        <div class="card">
+          <div class="card__icon">&#x26A1;</div>
+          <h3 class="card__title">EventStorming Masterclass</h3>
+          <p class="card__description">
+            Master the art of collaborative domain discovery. From Big Picture to Design Level,
+            unlock hidden knowledge in your organization.
+          </p>
+          <a href="services.html" class="card__link">Learn More</a>
+        </div>
+        <div class="card">
+          <div class="card__icon">&#x1F504;</div>
+          <h3 class="card__title">Event Sourcing & CQRS</h3>
+          <p class="card__description">
+            Deep dive into event-driven architectures. Build systems that capture the full
+            history of your business decisions.
+          </p>
+          <a href="services.html" class="card__link">Learn More</a>
+        </div>
+        <div class="card">
+          <div class="card__icon">&#x1F9E0;</div>
+          <h3 class="card__title">LLM-Assisted Development</h3>
+          <p class="card__description">
+            NEW: Harness AI to accelerate your domain modeling. Learn effective prompting
+            and validation techniques for DDD with LLMs.
+          </p>
+          <a href="services.html" class="card__link">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Community Highlights -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-header__subtitle">Community</span>
+        <h2 class="section-header__title">Building the DDD Community</h2>
+        <p class="section-header__description">
+          Knowledge grows when shared. I'm proud to contribute to these community initiatives.
+        </p>
+      </div>
+      <div class="community-cards">
+        <div class="community-card">
+          <h3 class="community-card__title">KanDDDinsky</h3>
+          <p class="community-card__description">
+            A unique software design conference in Berlin bringing together practitioners
+            from around the world to share DDD experiences and insights.
+          </p>
+          <a href="https://kandddinsky.de" target="_blank" rel="noopener">Visit KanDDDinsky</a>
+        </div>
+        <div class="community-card">
+          <h3 class="community-card__title">Virtual DDD</h3>
+          <p class="community-card__description">
+            A global online community hosting regular sessions on Domain-Driven Design,
+            making expert knowledge accessible to everyone, everywhere.
+          </p>
+          <a href="https://virtualddd.com" target="_blank" rel="noopener">Join Virtual DDD</a>
+        </div>
+        <div class="community-card">
+          <h3 class="community-card__title">German DDD Community</h3>
+          <p class="community-card__description">
+            Fostering local DDD adoption through meetups, discussions, and knowledge
+            sharing in the German-speaking software community.
+          </p>
+          <a href="contact.html">Get Involved</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section section--gray">
+    <div class="container text-center">
+      <h2 class="mb-lg">Ready to Transform Your Software Practice?</h2>
+      <p class="section-header__description mb-xl">
+        Let's discuss how DDD and collaborative modeling can help your team build better software.
+      </p>
+      <a href="contact.html" class="btn btn--primary btn--large">Get in Touch</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <img src="assets/bildmarke.svg" alt="Marco Heimeshoff">
+          <p>
+            Helping teams master the art of business software through Domain-Driven Design,
+            collaborative modeling, and practical expertise.
+          </p>
+        </div>
+        <div>
+          <h4 class="footer__title">Navigation</h4>
+          <ul class="footer__links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__title">Services</h4>
+          <ul class="footer__links">
+            <li><a href="services.html">DDD Workshops</a></li>
+            <li><a href="services.html">EventStorming</a></li>
+            <li><a href="services.html">Consulting</a></li>
+            <li><a href="services.html">Speaking</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__title">Community</h4>
+          <ul class="footer__links">
+            <li><a href="https://kandddinsky.de" target="_blank" rel="noopener">KanDDDinsky</a></li>
+            <li><a href="https://virtualddd.com" target="_blank" rel="noopener">Virtual DDD</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copyright">&copy; 2024 Marco Heimeshoff. All rights reserved.</p>
+        <div class="footer__social">
+          <a href="https://twitter.com/Heimeshansen" target="_blank" rel="noopener" aria-label="Twitter">X</a>
+          <a href="https://mastodon.social/@heimeshoff" target="_blank" rel="noopener" aria-label="Mastodon">M</a>
+          <a href="https://linkedin.com/in/heimeshoff" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>

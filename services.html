@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="DDD workshops, EventStorming masterclasses, consulting, and speaking. Explore Marco Heimeshoff's training and consulting services.">
+  <title>Services | Marco Heimeshoff - DDD Training & Consulting</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="header__logo">
+        <img src="assets/bildmarke.svg" alt="Marco Heimeshoff Logo">
+      </a>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link">Home</a></li>
+          <li><a href="about.html" class="nav__link">About</a></li>
+          <li><a href="services.html" class="nav__link nav__link--active">Services</a></li>
+          <li><a href="contact.html" class="nav__link">Contact</a></li>
+        </ul>
+        <a href="contact.html" class="btn btn--primary">Book a Training</a>
+        <button class="nav__toggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Services Hero -->
+  <section class="section" style="padding-top: calc(var(--header-height) + var(--space-3xl));">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-header__subtitle">Services</span>
+        <h1 class="section-header__title">Training & Consulting</h1>
+        <p class="section-header__description">
+          From intensive workshops to long-term consulting, I offer services tailored to help
+          your team master Domain-Driven Design and build better software.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Training Workshops -->
+  <section class="section section--gray">
+    <div class="container">
+      <div class="service-category">
+        <h2 class="service-category__title">Training Workshops</h2>
+
+        <div class="service-card">
+          <div class="service-card__header">
+            <h3>Domain Models in Practice: DDD, CQRS & Event Sourcing</h3>
+          </div>
+          <p>
+            A comprehensive, hands-on workshop covering the tactical patterns of Domain-Driven Design.
+            Learn to implement aggregates, entities, value objects, domain events, and repositories
+            that truly reflect your business domain.
+          </p>
+          <p>
+            We'll explore CQRS (Command Query Responsibility Segregation) and Event Sourcing patterns,
+            understanding when and how to apply them effectively. Through practical exercises,
+            you'll gain the skills to design systems that capture not just current state,
+            but the full history of business decisions.
+          </p>
+          <div class="service-card__features">
+            <span class="service-card__feature">3 days</span>
+            <span class="service-card__feature">Hands-on exercises</span>
+            <span class="service-card__feature">Real-world case studies</span>
+            <span class="service-card__feature">Code examples</span>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card__header">
+            <h3>EventStorming Masterclass</h3>
+          </div>
+          <p>
+            Master the art of collaborative domain discovery. EventStorming is a powerful workshop
+            format for rapidly exploring complex business domains, identifying bounded contexts,
+            and aligning technical and business stakeholders.
+          </p>
+          <p>
+            From Big Picture EventStorming for strategic overview to Design Level EventStorming
+            for detailed modeling, you'll learn to facilitate sessions that unlock hidden domain
+            knowledge and create shared understanding across your organization.
+          </p>
+          <div class="service-card__features">
+            <span class="service-card__feature">2 days</span>
+            <span class="service-card__feature">Facilitation techniques</span>
+            <span class="service-card__feature">Multiple EventStorming levels</span>
+            <span class="service-card__feature">Practice facilitation</span>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card__header">
+            <h3>Event Sourcing & CQRS Master Class</h3>
+          </div>
+          <p>
+            A deep dive into event-driven architectures. This workshop focuses specifically on
+            Event Sourcing and CQRS patterns, going beyond the basics to explore advanced
+            scenarios, projections, snapshotting, and integration patterns.
+          </p>
+          <p>
+            Learn how to design event schemas, handle versioning and evolution, implement
+            projections for different read models, and integrate with existing systems.
+            Practical exercises ensure you leave with applicable skills.
+          </p>
+          <div class="service-card__features">
+            <span class="service-card__feature">2-3 days</span>
+            <span class="service-card__feature">Advanced patterns</span>
+            <span class="service-card__feature">Schema design</span>
+            <span class="service-card__feature">Integration strategies</span>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card__header">
+            <h3>LLM-Assisted Development</h3>
+            <span class="service-card__badge">NEW</span>
+          </div>
+          <p>
+            Harness the power of Large Language Models to accelerate your domain modeling
+            and development workflow. Learn effective prompting techniques, validation
+            strategies, and how to combine AI capabilities with domain expertise.
+          </p>
+          <p>
+            This workshop explores the intersection of DDD and AI, showing how LLMs can help
+            with domain exploration, code generation, documentation, and more, while maintaining
+            the rigor and accuracy your domain requires.
+          </p>
+          <div class="service-card__features">
+            <span class="service-card__feature">1-2 days</span>
+            <span class="service-card__feature">Effective prompting</span>
+            <span class="service-card__feature">AI + DDD integration</span>
+            <span class="service-card__feature">Validation techniques</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Consulting Services -->
+  <section class="section">
+    <div class="container">
+      <div class="service-category">
+        <h2 class="service-category__title">Consulting Services</h2>
+
+        <div class="service-card">
+          <h3>Domain Discovery & Modeling</h3>
+          <p>
+            Bring in an experienced hand to help uncover your domain's hidden complexity.
+            Through facilitated workshops, stakeholder interviews, and collaborative modeling
+            sessions, I help teams build a shared understanding of their business domain.
+          </p>
+          <div class="service-card__features">
+            <span class="service-card__feature">EventStorming facilitation</span>
+            <span class="service-card__feature">Context mapping</span>
+            <span class="service-card__feature">Domain stories</span>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <h3>Architecture Review & Advisory</h3>
+          <p>
+            Get an outside perspective on your system architecture. I review existing systems,
+            identify improvement opportunities, and provide actionable recommendations for
+            evolving your architecture toward DDD principles.
+          </p>
+          <div class="service-card__features">
+            <span class="service-card__feature">Code review</span>
+            <span class="service-card__feature">Architecture assessment</span>
+            <span class="service-card__feature">Migration strategies</span>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <h3>Team Coaching</h3>
+          <p>
+            Embed DDD practices into your team's daily workflow. Through ongoing coaching,
+            pair programming, and code reviews, I help teams internalize DDD principles
+            and apply them effectively to their specific context.
+          </p>
+          <div class="service-card__features">
+            <span class="service-card__feature">Ongoing support</span>
+            <span class="service-card__feature">Pair programming</span>
+            <span class="service-card__feature">Mentoring</span>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <h3>Keynotes & Speaking</h3>
+          <p>
+            Inspire your team or conference audience with talks on Domain-Driven Design,
+            EventStorming, software architecture, and the future of software development.
+            Available for conferences, company events, and meetups.
+          </p>
+          <div class="service-card__features">
+            <span class="service-card__feature">Conference talks</span>
+            <span class="service-card__feature">Company events</span>
+            <span class="service-card__feature">Custom topics</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Engagement Models -->
+  <section class="section section--gray">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-header__subtitle">Flexibility</span>
+        <h2 class="section-header__title">Engagement Models</h2>
+        <p class="section-header__description">
+          Every team is different. Choose the format that works best for your situation.
+        </p>
+      </div>
+      <div class="engagement-models">
+        <div class="engagement-model">
+          <div class="engagement-model__icon">&#x1F310;</div>
+          <h4>Public Workshops</h4>
+          <p>Join scheduled public workshops with participants from various companies. Great for individuals or small groups.</p>
+        </div>
+        <div class="engagement-model">
+          <div class="engagement-model__icon">&#x1F3E2;</div>
+          <h4>Private In-House</h4>
+          <p>Bring the training to your team. Customized workshops focused on your specific domain and challenges.</p>
+        </div>
+        <div class="engagement-model">
+          <div class="engagement-model__icon">&#x1F4BB;</div>
+          <h4>Remote</h4>
+          <p>Full-featured virtual workshops using collaborative online tools. Same quality, no travel required.</p>
+        </div>
+        <div class="engagement-model">
+          <div class="engagement-model__icon">&#x1F4CD;</div>
+          <h4>On-Site</h4>
+          <p>I come to you. Face-to-face interaction, hands-on facilitation, and immersive learning experience.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What to Expect -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-header__subtitle">What to Expect</span>
+        <h2 class="section-header__title">The Workshop Experience</h2>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <div class="card__icon">&#x1F4DA;</div>
+          <h3 class="card__title">Pre-Work Materials</h3>
+          <p class="card__description">
+            Receive preparation materials before the workshop so we can hit the ground running.
+            Background reading, setup instructions, and preliminary exercises.
+          </p>
+        </div>
+        <div class="card">
+          <div class="card__icon">&#x1F91D;</div>
+          <h3 class="card__title">Interactive Sessions</h3>
+          <p class="card__description">
+            No death by PowerPoint. Workshops are highly interactive with exercises, discussions,
+            collaborative modeling, and real-time feedback.
+          </p>
+        </div>
+        <div class="card">
+          <div class="card__icon">&#x1F4DD;</div>
+          <h3 class="card__title">Takeaway Resources</h3>
+          <p class="card__description">
+            Leave with reference materials, cheat sheets, code samples, and resources to continue
+            your learning journey back at work.
+          </p>
+        </div>
+        <div class="card">
+          <div class="card__icon">&#x1F4E7;</div>
+          <h3 class="card__title">Follow-Up Support</h3>
+          <p class="card__description">
+            Questions after the workshop? I provide follow-up support to help you apply what
+            you've learned to your real-world projects.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section section--gray">
+    <div class="container text-center">
+      <h2 class="mb-lg">Ready to Level Up Your Team?</h2>
+      <p class="section-header__description mb-xl">
+        Let's discuss which training or consulting engagement would best serve your needs.
+      </p>
+      <a href="contact.html" class="btn btn--primary btn--large">Get in Touch</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <img src="assets/bildmarke.svg" alt="Marco Heimeshoff">
+          <p>
+            Helping teams master the art of business software through Domain-Driven Design,
+            collaborative modeling, and practical expertise.
+          </p>
+        </div>
+        <div>
+          <h4 class="footer__title">Navigation</h4>
+          <ul class="footer__links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__title">Services</h4>
+          <ul class="footer__links">
+            <li><a href="services.html">DDD Workshops</a></li>
+            <li><a href="services.html">EventStorming</a></li>
+            <li><a href="services.html">Consulting</a></li>
+            <li><a href="services.html">Speaking</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__title">Community</h4>
+          <ul class="footer__links">
+            <li><a href="https://kandddinsky.de" target="_blank" rel="noopener">KanDDDinsky</a></li>
+            <li><a href="https://virtualddd.com" target="_blank" rel="noopener">Virtual DDD</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copyright">&copy; 2024 Marco Heimeshoff. All rights reserved.</p>
+        <div class="footer__social">
+          <a href="https://twitter.com/Heimeshansen" target="_blank" rel="noopener" aria-label="Twitter">X</a>
+          <a href="https://mastodon.social/@heimeshoff" target="_blank" rel="noopener" aria-label="Mastodon">M</a>
+          <a href="https://linkedin.com/in/heimeshoff" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
