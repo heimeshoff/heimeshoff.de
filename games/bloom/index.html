@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bloom — Rosalind's Garden</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8C%B8%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <script type="module" crossorigin src="./assets/index-CTTuBgG2.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-B4MTXKNb.css">
+</head>
+<body>
+  <div id="app">
+    <div id="hud" class="hidden">
+      <div id="topleft">
+        <div id="clock" class="panel">
+          <div id="dial"><div id="dialHand"></div></div>
+          <div>
+            <div id="day" class="serif">Day 1</div>
+            <div id="time">08:00 · Clear</div>
+          </div>
+        </div>
+        <div id="objective" class="panel small"></div>
+      </div>
+
+      <div id="beauty" class="panel">
+        <div class="beauty-head">
+          <span class="serif">Garden beauty</span>
+          <span id="rank">Neglected</span>
+        </div>
+        <div class="bar"><div id="beautyFill"></div><div id="beautyTicks"></div></div>
+        <div class="beauty-foot"><span id="beautyPct">0%</span><span id="nextGoal"></span></div>
+        <div id="stats"></div>
+      </div>
+
+      <div id="toasts"></div>
+      <div id="cellinfo" class="panel hidden"></div>
+
+      <div id="bottom">
+        <div id="prompts">
+          <div id="promptUse" class="prompt hidden"></div>
+          <div id="promptE" class="prompt hidden"></div>
+        </div>
+        <div id="subbar" class="hidden"></div>
+        <div id="hotbar"></div>
+      </div>
+      <div id="hints"><b>H</b> help · <b>J</b> journal · <b>M</b> sound · <b>P</b> photo mode</div>
+    </div>
+
+    <div id="title">
+      <div class="title-card">
+        <div class="title-flourish">✿ ❀ ✿</div>
+        <h1 class="serif">Bloom</h1>
+        <div class="subtitle serif"><i>Rosalind's Garden</i></div>
+        <p class="story">Your grandmother Rosalind has left you her cottage — and her garden, gone wild these last years. Four generations of women have tended this soil. Now it is your turn.</p>
+        <div class="looks">
+          <div class="look-row"><span>Dress</span><div id="lookDress" class="swatches"></div></div>
+          <div class="look-row"><span>Hair</span><div id="lookHair" class="swatches"></div></div>
+          <div class="look-row"><span>Skin</span><div id="lookSkin" class="swatches"></div></div>
+        </div>
+        <div class="buttons">
+          <button id="btnContinue" class="btn primary hidden">Continue your garden</button>
+          <button id="btnNew" class="btn primary">Begin</button>
+        </div>
+        <div class="controls-mini">
+          <span><b>WASD</b> walk</span><span><b>Space</b> / click use tool</span><span><b>E</b> interact</span><span><b>1–8</b> tools</span>
+        </div>
+      </div>
+    </div>
+
+    <div id="journal" class="modal hidden">
+      <div class="book">
+        <div class="page">
+          <div class="page-num" id="jNum"></div>
+          <h2 class="serif" id="jTitle"></h2>
+          <div class="page-text serif" id="jText"></div>
+          <div class="page-sign serif" id="jSign"></div>
+          <div class="pressed">❀</div>
+        </div>
+        <div class="book-nav">
+          <button class="btn" id="jPrev">‹ Previous</button>
+          <button class="btn" id="jClose">Close</button>
+          <button class="btn" id="jNext">Next ›</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="help" class="modal hidden">
+      <div class="panel help-card">
+        <h2 class="serif">How to tend the garden</h2>
+        <div class="help-grid">
+          <div><b>WASD / Arrows</b> walk · <b>Shift</b> hurry</div>
+          <div><b>Space</b> or <b>left click</b> use the tool on the highlighted patch</div>
+          <div><b>E</b> interact: take tools, refill, open the journal, pet the cat, sleep</div>
+          <div><b>1–8</b> or click the hotbar to choose a tool · <b>Q / R</b> choose seeds or ornament</div>
+          <div><b>Mouse wheel</b> zoom · <b>P</b> photo mode (hide the interface)</div>
+          <div><b>J</b> journal · <b>M</b> sound on/off · <b>Esc</b> close</div>
+        </div>
+        <h3 class="serif">The garden year</h3>
+        <ul>
+          <li>Everything you need is in the <b>cottage</b>: tools on the rack, seeds on the shelf, compost in the sack, the watering can by the pump.</li>
+          <li><b>Clear</b> weeds, withered plants and litter — they drag the garden's beauty down. Small weeds come out by hand; big ones need the <b>hoe</b>; brambles yield to the <b>shears</b>.</li>
+          <li><b>Water</b> soaks a 3×3 patch. Plants in dry soil wilt, then wither. Refill at the well, the pump or the pond. Rain waters everything.</li>
+          <li><b>Compost</b> feeds the soil: plants grow faster and recover. Everything you clear goes into the compost bin by the gate and slowly becomes new compost.</li>
+          <li><b>Prune</b> tired plants with the shears to revive them. Deadhead blooming ones so they flourish.</li>
+          <li>Till grass with the <b>hoe</b>, then <b>sow seeds</b>. Mix species and plant them close together — blooming neighbours and variety make the garden lovelier.</li>
+          <li>As the garden grows more beautiful, new seeds and ornaments appear in the cottage, and Grandmother's journal reveals new pages.</li>
+          <li>Sleep in the bed after dusk to skip the night.</li>
+        </ul>
+        <button class="btn primary" id="helpClose">Back to the garden</button>
+      </div>
+    </div>
+
+    <div id="fade"></div>
+  </div>
+</body>
+</html>
